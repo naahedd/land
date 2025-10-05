@@ -5,6 +5,7 @@ import { twMerge } from "tailwind-merge";
 import { SessionProvider } from "@/components/providers/SessionProvider";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
+import r8 from "@/assets/r83.png";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -22,6 +23,9 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className="relative">
+      <head>
+        <link rel="icon" href={r8.src} />
+      </head>
       <body className={twMerge(dmSans.className, "antialiased bg-[#f6feea]")}>
         <SessionProvider session={session}>
           {children}
