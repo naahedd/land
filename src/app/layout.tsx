@@ -9,8 +9,8 @@ import { authOptions } from "@/lib/auth";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Light Saas Landing Page",
-  description: "Template created by Frontend Tribe",
+  title: "Resum8",
+  description: "Resumes that get you the job",
 };
 
 export default async function RootLayout({
