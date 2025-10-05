@@ -54,7 +54,7 @@ export const Hero = () => {
               </button> */}
             </div>
           </div>
-          <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
+          <div className="hidden md:block md:mt-0 md:h-[648px] md:flex-1 relative">
             <motion.img
               src={Hands.src}
               alt="Cog image"
