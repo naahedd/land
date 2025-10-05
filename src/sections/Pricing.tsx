@@ -2,6 +2,7 @@
 import CheckIcon from "@/assets/check.svg";
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const pricingTiers = [
   {
@@ -11,48 +12,28 @@ const pricingTiers = [
     popular: false,
     inverse: false,
     features: [
-      "Up to 5 project members",
-      "Unlimited tasks and projects",
-      "2GB storage",
-      "Integrations",
-      "Basic support",
+      "Upload 1 resume only",
+      "Create up to 3 tailored versions/day",
+      "Company-specific tailoring for resumes",
+      "General project & work experience suggestions",
+      "Basic company & startup recommendations",
     ],
   },
   {
     title: "Pro",
-    monthlyPrice: 9,
+    monthlyPrice: 10,
     buttonText: "Sign up now",
     popular: true,
     inverse: true,
     features: [
-      "Up to 50 project members",
-      "Unlimited tasks and projects",
-      "50GB storage",
-      "Integrations",
-      "Priority support",
-      "Advanced support",
-      "Export support",
+      "Unlimited resume uploads & tailored versions",
+      "Smart Resume Focus Slider (save hours)",
+      "Application performance analytics & tracking (coming soon!)",
+      "Project blueprints drawn directly from successful hires at target companies",
+      "Advanced company & hidden-startup recommendations",
     ],
   },
-  {
-    title: "Business",
-    monthlyPrice: 19,
-    buttonText: "Sign up now",
-    popular: false,
-    inverse: false,
-    features: [
-      "Up to 5 project members",
-      "Unlimited tasks and projects",
-      "200GB storage",
-      "Integrations",
-      "Dedicated account manager",
-      "Custom fields",
-      "Advanced analytics",
-      "Export capabilities",
-      "API access",
-      "Advanced security features",
-    ],
-  },
+ 
 ];
 
 export const Pricing = () => {
@@ -62,11 +43,10 @@ export const Pricing = () => {
         <div className="section-heading">
           <h2 className="section-title">Pricing</h2>
           <p className="section-description mt-5">
-            Free forever. Upgrade for unlimited tasks, better security, and
-            exclusive features.
+          Other tools lock you into subscriptions. We give you unlimited power for a one-time $10.
           </p>
         </div>
-        <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end lg:justify-center">
+        <div className="flex flex-col gap-32 items-center mt-10 lg:flex-row lg:items-end lg:justify-center">
           {pricingTiers.map(
             ({
               title,
@@ -77,6 +57,7 @@ export const Pricing = () => {
               features,
             }) => (
               <div
+                key={title}
                 className={twMerge(
                   "card",
                   inverse === true && "border-black bg-black text-white"
@@ -114,9 +95,11 @@ export const Pricing = () => {
                   <span className="text-4xl font-bold tracking-tighter leading-none">
                     ${monthlyPrice}
                   </span>
-                  <span className="tracking-tight font-bold text-black/50">
-                    /month
-                  </span>
+                  {title !== 'Pro' && (
+  <span className="tracking-tight font-bold text-black/50">
+    /month
+  </span>
+)}
                 </div>
                 <button
                   className={twMerge(
@@ -124,12 +107,13 @@ export const Pricing = () => {
                     inverse === true && "bg-white text-black"
                   )}
                 >
-                  {buttonText}
+                  <Link href="/auth/signup">{buttonText}</Link>
+                  
                 </button>
                 <ul className="flex flex-col gap-5 mt-8">
                   {features.map((feature) => (
-                    <li className="text-sm flex items-center gap-4">
-                      <CheckIcon className="h-6 w-6" />
+                    <li key={feature} className="text-sm flex items-center gap-4">
+                      <CheckIcon className="h-6 w-6 flex-shrink-0"/>
                       <span>{feature}</span>
                     </li>
                   ))}

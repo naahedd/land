@@ -1,10 +1,12 @@
 "use client";
 import ArrowRight from "@/assets/arrow-right.svg";
-import starImage from "@/assets/star.png";
-import springImage from "@/assets/spring.png";
+import smileyImage from "@/assets/p59 1.png";
+import cubeImage from "@/assets/Cube6 - Transparent.png";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import router from "next/router";
+import Link from "next/link";
 
 export const CallToAction = () => {
   const sectionRef = useRef(null);
@@ -23,12 +25,11 @@ export const CallToAction = () => {
         <div className="section-heading relative">
           <h2 className="section-title">Sign up for free today</h2>
           <p className="section-description mt-5">
-            Celebrate the joy of accomplishment with an app designed to track
-            your progress and motivate your efforts.
+          Everyone tells you to tailor your resume but nobody shows you how. We do. See exactly which projects <span className="font-bold">Microsoft</span> engineers had on their resumes. Know which skills got designers into <span className="font-bold">Figma</span>. Learn what made marketing managers stand out to <span className="font-bold">Nike</span>. Real examples from real hires, personalized for your goals.
           </p>
           <motion.img
-            src={starImage.src}
-            alt="Star Image"
+            src={smileyImage.src}
+            alt="Smiley Image"
             width={360}
             className="absolute -left-[350px] -top-[137px]"
             style={{
@@ -36,21 +37,21 @@ export const CallToAction = () => {
             }}
           />
           <motion.img
-            src={springImage.src}
-            alt="Spring Image"
+            src={cubeImage.src}
+            alt="Cube Image"
             width={360}
-            className="absolute -right-[331px] -top-[19px]"
+            className="absolute -right-[342px] -top-[19px]"
             style={{
               translateY,
             }}
           />
         </div>
         <div className="flex gap-2 mt-10 justify-center">
-          <button className="btn btn-primary">Get for free</button>
-          <button className="btn btn-text gap-1">
+        <Link href="/auth/signup" className="btn btn-primary">Get for free</Link>
+          {/* <button className="btn btn-text gap-1">
             <span>Learn more</span>
             <ArrowRight className="h-5 w-5" />
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

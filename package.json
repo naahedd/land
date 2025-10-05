@@ -9,14 +9,28 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth/supabase-adapter": "^1.10.0",
+    "@aws-sdk/client-textract": "^3.899.0",
+    "@stripe/stripe-js": "^8.0.0",
+    "@supabase/supabase-js": "^2.58.0",
     "framer-motion": "^11.2.14",
+    "lucide-react": "^0.544.0",
     "next": "14.2.4",
+    "next-auth": "^4.24.11",
+    "openai": "^5.23.1",
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "^1.1.1",
+    "pdf2json": "^3.2.2",
+    "pdfjs-dist": "^5.4.149",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-markdown": "^10.1.0",
+    "stripe": "^19.0.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^20",
+    "@types/pdf-parse": "^1.1.5",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",

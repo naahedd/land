@@ -6,14 +6,27 @@ import { Pricing } from "@/sections/Pricing";
 import { Testimonials } from "@/sections/Testimonials";
 import { CallToAction } from "@/sections/CallToAction";
 import { Footer } from "@/sections/Footer";
+import { ShowcaseI } from "@/sections/ShowcaseI";
+import { authOptions } from "@/lib/auth";
+import { getServerSession } from "next-auth/next";
+import { redirect } from "next/navigation";
 
-export default function Home() {
+export default async function Home() {
+  // Check if user is already signed in
+  const session = await getServerSession(authOptions);
+  
+  // If user has a session, redirect to dashboard
+  if (session) {
+    redirect("/dashboard");
+  }
+
   return (
     <>
       <Header />
       <Hero />
       <LogoTicker />
       <ProductShowcase />
+      <ShowcaseI />
       <Pricing />
       <Testimonials />
       <CallToAction />

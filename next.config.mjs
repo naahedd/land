@@ -28,6 +28,10 @@ const nextConfig = {
     return config;
   },
 
+  images: {
+    domains: ['lh3.googleusercontent.com'],  // Add this line to allow images from Google
+  },
+
   // ...other config
 };
 

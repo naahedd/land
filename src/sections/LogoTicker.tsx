@@ -1,12 +1,12 @@
 "use client";
-import acmeLogo from "@/assets/logo-acme.png";
-import quantumLogo from "@/assets/logo-quantum.png";
-import echoLogo from "@/assets/logo-echo.png";
-import celestialLogo from "@/assets/logo-celestial.png";
-import pulseLogo from "@/assets/logo-pulse.png";
-import apexLogo from "@/assets/logo-apex.png";
+import google from "@/assets/google.png";
+import amazonLogo from "@/assets/amazon.png";
+import metaLogo from "@/assets/meta.png";
+import airbnbLogo from "@/assets/airbnb.png";
+import microsoftLogo from "@/assets/microsoft.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import tesla from "@/assets/tesla.png";
 
 export const LogoTicker = () => {
   return (
@@ -19,74 +19,75 @@ export const LogoTicker = () => {
               translateX: "-50%",
             }}
             transition={{
-              duration: 20,
+              duration: 30,
               repeat: Infinity,
               ease: "linear",
               repeatType: "loop",
             }}
           >
             <Image
-              src={acmeLogo}
-              alt="Acme Logo"
+              src={tesla}
+              alt=" Logo"
+              className="logo-ticker-image w-30 h-30"
+            />
+            <Image
+              src={google}
+              alt=" Logo"
+              className="logo-ticker-image w-30 h-30"
+            />
+            <Image
+              src={amazonLogo}
+              alt=" Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={quantumLogo}
-              alt="Quantum Logo"
-              className="logo-ticker-image"
+              src={metaLogo}
+              alt=" Logo"
+              className="logo-ticker-image w-30 h-30"
             />
             <Image
-              src={echoLogo}
-              alt="Echo Logo"
+              src={airbnbLogo}
+              alt=" Logo"
               className="logo-ticker-image"
             />
-            <Image
-              src={celestialLogo}
-              alt="Celestial Logo"
-              className="logo-ticker-image"
-            />
-            <Image
-              src={pulseLogo}
-              alt="Pulse Logo"
-              className="logo-ticker-image"
-            />
-            <Image
+            {/* <Image
               src={apexLogo}
               alt="Apex Logo"
               className="logo-ticker-image"
-            />
+            /> */}
 
             {/* Second set of logos for animation */}
             <Image
-              src={acmeLogo}
-              alt="Acme Logo"
+              src={tesla}
+              alt=" Logo"
+              className="logo-ticker-image w-20 h-20"
+              
+            />
+            <Image
+              src={google}
+              alt=" Logo"
+              className="logo-ticker-image w-30 h-30"
+            />
+            <Image
+              src={microsoftLogo}
+              alt=" Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={quantumLogo}
-              alt="Quantum Logo"
+              src={metaLogo}
+              alt=" Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={echoLogo}
-              alt="Echo Logo"
+              src={airbnbLogo}
+              alt=" Logo"
               className="logo-ticker-image"
             />
-            <Image
-              src={celestialLogo}
-              alt="Celestial Logo"
-              className="logo-ticker-image"
-            />
-            <Image
-              src={pulseLogo}
-              alt="Pulse Logo"
-              className="logo-ticker-image"
-            />
-            <Image
+            {/* <Image
               src={apexLogo}
               alt="Apex Logo"
               className="logo-ticker-image"
-            />
+            /> */}
           </motion.div>
         </div>
       </div>
