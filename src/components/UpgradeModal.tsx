@@ -90,7 +90,7 @@ export default function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalPr
           disabled={isLoading}
           className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
         >
-          {isLoading ? 'Processing...' : 'Upgrade Now - $5'}
+          {isLoading ? 'Processing...' : 'Upgrade Now - $10'}
         </button>
 
         <p className="text-xs text-gray-500 text-center mt-4">

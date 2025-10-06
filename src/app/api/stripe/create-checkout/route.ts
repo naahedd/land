@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
           price_data: {
             currency: 'usd',
             product: process.env.STRIPE_PRODUCT_ID!,
-            unit_amount: 500, // $5.00 in cents
+            unit_amount: 1000, // $5.00 in cents
           },
           quantity: 1,
         },
