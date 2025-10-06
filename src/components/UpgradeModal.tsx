@@ -61,7 +61,7 @@ export default function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalPr
 
         <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6 mb-6">
           <div className="text-center mb-4">
-            <span className="text-4xl font-bold text-gray-900">$5</span>
+            <span className="text-4xl font-bold text-gray-900">$10</span>
             <span className="text-gray-600 ml-2">one-time</span>
           </div>
 
